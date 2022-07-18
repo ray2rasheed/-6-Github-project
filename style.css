@@ -1,0 +1,123 @@
+    @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+    body {
+        font-family: 'Cairo', sans-serif;
+        min-height: 100vh;
+        background-image: url('js2.png');
+        background-size: cover;
+    }
+    
+    .size-p {
+        padding: 4rem;
+    }
+    
+    .logo {
+        position: relative;
+        top: 13rem;
+        border-radius: 10px;
+        right: 4rem;
+        max-width: 250px;
+    }
+    
+    .main {
+        background-color: white;
+        padding: 13rem 2;
+        border-radius: 10px;
+    }
+    
+    .ring {
+        position: absolute;
+        width: 14rem;
+        height: 14rem;
+        border-radius: 50%;
+        animation: ring 2s linear infinite;
+    }
+    
+    @keyframes ring {
+        0% {
+            transform: rotate(0deg);
+            box-shadow: 1px 5px 2px #e65c00;
+        }
+        50% {
+            transform: rotate(180deg);
+            box-shadow: 1px 5px 2px #18b201;
+        }
+        100% {
+            transform: rotate(360deg);
+            box-shadow: 1px 5px 2px #0456c8;
+        }
+    }
+    
+    .button-center:hover {
+        background-color: #c93b34;
+    }
+    
+    .ring:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(255, 255, 255, .3);
+    }
+    
+    span {
+        color: black;
+        font-size: 20px;
+        line-height: 197px;
+        animation: text 3s ease-in-out infinite;
+        position: relative;
+        left: 80px;
+        top: 24px;
+    }
+    
+    @keyframes text {
+        50% {
+            color: black;
+        }
+    }
+    
+    @media only screen and (max-width: 1198px) {
+        span {
+            top: -90px;
+            right: -10px;
+        }
+        .ring {
+            top: 50%;
+            left: 40%;
+        }
+    }
+    
+    @media only screen and (max-width: 991px) {
+        span {
+            line-height: 2;
+            top: -35px;
+        }
+        .ring {
+            top: 70%;
+            left: 34%;
+        }
+    }
+    
+    @media only screen and (max-width: 767px) {
+        span {
+            right: 2px;
+        }
+        .ring {
+            right:80px;
+        }
+        .button-center {
+            margin: 7 -10rem;
+        }
+    }
+    
+    @media only screen and (min-width: 1200px) {
+        .img-size {
+            max-width: 140% !important;
+        }
+    }
+    
+    .ring-size {
+        margin: 11rem 18;
+    }
